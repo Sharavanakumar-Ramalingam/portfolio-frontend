@@ -278,57 +278,50 @@ section {
     SKILLS
 ---------------------- */
 .skills {
+  padding: 4rem 2rem;
   text-align: center;
 }
 
 .skills .heading {
-  font-size: 4.2rem;
-  font-weight: 700;
-  color: var(--main-color);
-  margin-bottom: 3rem;
-  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
-.skills-grid {
+.skills-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 2rem;
-  margin-top: 4rem;
+  gap: 1.5rem;
   justify-content: center;
-  padding: 0 2rem;
-  justify-items: center;
+  align-items: center;
 }
 
 .skill-card {
   background: var(--second-bg-color);
-  padding: 2.5rem;
-  border-radius: 1.5rem;
+  border: 1px solid var(--main-color);
+  border-radius: 12px;
+  padding: 1.2rem;
   text-align: center;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 140px;
-  min-height: 140px;
+  color: var(--text-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card i {
+  font-size: 2.2rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.skill-card span {
+  display: block;
+  margin-top: 0.3rem;
+  font-weight: 600;
+  color: var(--main-color);
 }
 
 .skill-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 1rem var(--accent-color);
-}
-
-.skill-card i {
-  font-size: 3.6rem;
-  color: var(--main-color);
-  margin-bottom: 1rem;
-}
-
-.skill-card span {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--main-color);
-  margin-top: 0.5rem;
+  box-shadow: 0 0 20px var(--main-color);
 }
 
 
