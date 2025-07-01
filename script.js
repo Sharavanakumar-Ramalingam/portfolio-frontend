@@ -213,5 +213,3 @@ async function sendMessage() {
     console.error("Chatbot error:", error);
   }
 }
-
-});
