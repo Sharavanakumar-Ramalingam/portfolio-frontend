@@ -726,7 +726,7 @@ section {
 
 .user-msg {
   background-color: #e0f7fa;
-  color: #00303f;
+  color: var(--bg-color);
   align-self: flex-end;
   margin-left: auto;
   border-top-right-radius: 0;
@@ -734,7 +734,7 @@ section {
 
 .bot-msg {
   background-color: #f3e5f5;
-  color: #4a148c;
+  color: var(--main-color);
   align-self: flex-start;
   margin-right: auto;
   border-top-left-radius: 0;
