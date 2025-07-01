@@ -36,10 +36,7 @@ document.querySelectorAll("header nav a").forEach((anchor) => {
     const targetId = this.getAttribute("href");
     const targetSection = document.querySelector(targetId);
     if (targetSection) {
-      window.scrollTo({
-        top: targetSection.offsetTop - 50,
-        behavior: "smooth",
-      });
+      window.scrollTo({ top: targetSection.offsetTop - 50, behavior: "smooth" });
     }
   });
 });
@@ -119,7 +116,7 @@ function typeEffect() {
 document.addEventListener("DOMContentLoaded", typeEffect);
 
 // =========================
-// Chatbot Integration with Flask Backend
+// Chatbot Integration (with hosted Flask backend)
 // =========================
 const messages = [
   {
