@@ -657,7 +657,7 @@ section {
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  font-size:20px;
+  font-size:1.4rem;
 }
 
 /* Chatbot Header */
@@ -726,7 +726,7 @@ section {
 }
 
 .user-msg {
-  font-size: 0.98rem;
+  font-size: 1.4rem;
   background-color: #e0f7fa;
   color: var(--bg-color);
   align-self: flex-end;
@@ -735,7 +735,7 @@ section {
 }
 
 .bot-msg {
-  font-size: 0.98rem;
+  font-size: 1.4rem;
   background-color: #f3e5f5;
   color: var(--bg-color);
   align-self: flex-start;
