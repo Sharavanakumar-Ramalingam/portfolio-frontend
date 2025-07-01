@@ -123,41 +123,41 @@ const messages = [
     role: "system",
     content: `You're an AI assistant on the portfolio of Sharavana Kumar, an AIML Developer, Fullstack Developer, and Data Scientist.
 
-Sharavana has built impressive projects. Your job is to introduce them naturally and conversationally, avoiding technical jargon unless asked.
+Sharavana has built impressive projects, and your job is to introduce them **naturally and conversationally**, avoiding technical jargon unless asked.
 
 🧠 Speak in a friendly and helpful tone:
-- Don't use all-caps or markdown formatting
+- Don't use all-caps or markdown (**bold**)
 - Break long sentences into short ones
 - Use simple language and highlight the main purpose of each project
-- Use emojis and make the content short and sweet
+- Use emojis and Bold characters wherever required and make it short and sweet (like 💡, 🔍, 🎥, etc.)
+
+Here’s what you know about his work:
 
 Projects:
-- Lingua Learn : An AI-powered language learning app
-- Sibi: An AI-powered Study buddy 
-- Text-to-Image Generator
-- Text-to-Video Generator
-- AI Image Editor
-- Mental Health Chatbot
+- Lingua Learn : An AI-powered language learning app that helps users learn new languages through smart interaction.
+- Sibi: An AI-powered Study Buddy that helps you as a study companion.
+- Text-to-Image Generator: Turns user prompts into realistic images using generative AI.
+- Text-to-Video Generator: Converts descriptions into short educational videos with AI.
+- AI Image Editor: Lets users make smart edits to images right in the browser.
+- Mental Health Chatbot: Provides supportive mental health advice through AI conversation.
 
-Skills:
-- Python, JavaScript, PHP
-- Flask, FastAPI, MongoDB, MySQL
-- TensorFlow, scikit-learn, pandas, numpy, matplotlib
-- Git, GitHub, LangChain, RAG, REST API, Agentic AI
+Sharavana also has strong skills in Python, JavaScript, Flask, FastAPI, MongoDB, TensorFlow, and more.
 
 Achievements:
-- Hackathon winner (Best Performer & Communicator)
-- 2× National Symposium awardee
-- GUVI IITM Research Intern
+- Best Performer & Best Communicator in hackathons
+- 2× National Symposium award winner
+- Interned at GUVI IITM Research Park
 - IBM Certified Developer
 
-Answer clearly, politely, and like a helpful portfolio guide.`
+Always answer politely, clearly, and concisely like a helpful guide. If asked about anything else, guide the user back to portfolio sections.`  
   }
 ];
 
+
+
 function toggleChat() {
-  const chatbot = document.querySelector(".chatbot-container");
-  const overlay = document.querySelector(".chat-overlay");
+  const chatbot = document.getElementById("chatbot");
+  const overlay = document.getElementById("chat-overlay");
   const chatToggle = document.getElementById("chat-toggle");
   const body = document.body;
   const mainContent = document.getElementById("main-content");
@@ -169,29 +169,25 @@ function toggleChat() {
     overlay.style.display = "block";
     chatToggle.style.display = "none";
     body.style.overflow = "hidden";
-    if (mainContent) mainContent.classList.add("blur-content");
+    mainContent.classList.add("blur-content");
   } else {
     chatbot.style.display = "none";
     overlay.style.display = "none";
     chatToggle.style.display = "block";
     body.style.overflow = "auto";
-    if (mainContent) mainContent.classList.remove("blur-content");
+    mainContent.classList.remove("blur-content");
   }
 }
 
 async function sendMessage() {
   const input = document.getElementById("user-input");
-  const chatBox = document.querySelector(".chat-messages");
+  const chatBox = document.getElementById("chat-messages");
   const userText = input.value.trim();
 
   if (!userText) return;
 
-  // Show user message
   chatBox.innerHTML += `<div class="chat-message user-msg"><strong>You:</strong> ${userText}</div>`;
-  chatBox.scrollTo({ top: chatBox.scrollHeight, behavior: "smooth" });
   input.value = "";
-
-  // Add user message to conversation
   messages.push({ role: "user", content: userText });
 
   try {
@@ -208,25 +204,14 @@ async function sendMessage() {
     }
 
     const reply = data.choices[0].message.content;
-
-    // Show bot reply
     chatBox.innerHTML += `<div class="chat-message bot-msg"><strong>Bot:</strong> ${reply}</div>`;
-    chatBox.scrollTo({ top: chatBox.scrollHeight, behavior: "smooth" });
-
-    // Save bot reply
+    chatBox.scrollTop = chatBox.scrollHeight;
     messages.push({ role: "assistant", content: reply });
 
   } catch (error) {
-    chatBox.innerHTML += `<div class="chat-message bot-msg"><strong>Bot:</strong> Error: ${error.message}</div>`;
-    chatBox.scrollTo({ top: chatBox.scrollHeight, behavior: "smooth" });
+    chatBox.innerHTML += `<div><strong>Bot:</strong> Error: ${error.message}</div>`;
     console.error("Chatbot error:", error);
   }
 }
 
-// ✅ Send on Enter key
-document.getElementById("user-input").addEventListener("keypress", function (event) {
-  if (event.key === "Enter" && !event.shiftKey) {
-    event.preventDefault();
-    sendMessage();
-  }
 });
