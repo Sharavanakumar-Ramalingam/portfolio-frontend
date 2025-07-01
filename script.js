@@ -232,3 +232,20 @@ document.getElementById("user-input").addEventListener("keypress", function (eve
     sendMessage();
   }
 });
+// Toggle Mobile Menu
+const menuIcon = document.getElementById("menu-icon");
+const navbar = document.getElementById("navbar");
+
+menuIcon.onclick = () => {
+  navbar.classList.toggle("active");
+  menuIcon.classList.toggle("bx-x");
+};
+
+// Auto-close menu on nav link click (mobile only)
+document.querySelectorAll(".navbar a").forEach(link => {
+  link.addEventListener("click", () => {
+    navbar.classList.remove("active");
+    menuIcon.classList.remove("bx-x");
+  });
+});
+
