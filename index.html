@@ -8,305 +8,230 @@
   <!-- Boxicons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
 
-  <!-- Bootstrap -->
+  <!-- Bootstrap (optional) -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Add this before your <style> or CSS link -->
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="header navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-  <div class="container">
-    <a class="navbar-brand logo" href="#">Portfolio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#certifications">Achievements</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="#" class="logo">Portfolio</a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h3>Hello, I am</h3>
+      <h1>Sharavana Kumar R G</h1>
+      <h3>I'M a <span class="typing-text"></span></h3>
+      <div class="socialmedia">
+        <a href="https://www.linkedin.com/in/sharavanakumar06"><i class="bx bxl-linkedin-square"></i></a>
+        <a href="https://github.com/Sharavanakumar-Ramalingam"><i class="bx bxl-github"></i></a>
+        <a href="https://www.instagram.com/just_sharavana/"><i class="bx bxl-instagram"></i></a>
+      </div>
+      <a href="images/Resume1.docx" class="btn">Download CV</a>
     </div>
-  </div>
-</header>
-<section class="about container-fluid py-5" id="about">
-  <div class="row align-items-center">
-    <div class="col-lg-6 text-center about-image">
-      <img src="images/saro.png" alt="My Photo" class="img-fluid" />
+    <div class="home-image">
+      <img src="images/saro.png" alt="My Photo" />
     </div>
-    <div class="col-lg-6 about-content">
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-image">
+      <img src="images/saro.png" alt="My Photo" />
+    </div>
+    <div class="about-content">
       <h1 class="heading">About <span>Me</span></h1>
       <h3>I’m a <span class="typing-text about-typing-text"></span></h3>
       <p>As a passionate full-stack developer, I bring strong experience in crafting scalable, efficient, and user-centric web applications. I thrive on using technology to solve real-world problems and love working with both frontend and backend tools.</p>
-      <a href="#" class="btn btn-outline-light">Read More</a>
+      <a href="#" class="btn">Read More</a>
     </div>
+  </section>
+<!---skills section--->
+<section class="skills" id="skills">
+  <h1 class="heading">My <span>Skills</span></h1>
+  <div class="skills-grid">
+    <div class="skill-card"><i class='bx bxl-html5'></i><span>HTML</span></div>
+    <div class="skill-card"><i class='bx bxl-css3'></i><span>CSS</span></div>
+    <div class="skill-card"><i class='bx bxl-javascript'></i><span>JavaScript</span></div>
+    <div class="skill-card"><i class='bx bxl-python'></i><span>Python</span></div>
+    <div class="skill-card"><i class='bx bxl-django'></i><span>Django</span></div>
+    <div class="skill-card"><i class='bx bxl-react'></i><span>React</span></div>
+    <div class="skill-card"><i class='bx bxl-mongodb'></i><span>MongoDB</span></div>
+    <div class="skill-card"><i class='bx bx-code-block'></i><span>Flask</span></div>
+    <div class="skill-card"><i class='bx bx-server'></i><span>FastAPI</span></div>
+    <div class="skill-card"><i class='bx bx-brain'></i><span>Artificial Intelligence</span></div>
+    <div class="skill-card"><i class='bx bxl-php'></i><span>PHP</span></div>
+    <div class="skill-card"><i class='bx bx-cube'></i><span>TensorFlow</span></div>
+    <div class="skill-card"><i class='bx bx-bot'></i><span>Scikit-learn</span></div>
+    <div class="skill-card"><i class='bx bx-bar-chart'></i><span>Pandas</span></div>
+    <div class="skill-card"><i class='bx bx-math'></i><span>NumPy</span></div>
+    <div class="skill-card"><i class='bx bx-line-chart'></i><span>Matplotlib</span></div>
+    <div class="skill-card"><i class='bx bxl-git'></i><span>Git</span></div>
+    <div class="skill-card"><i class='bx bx-search-alt'></i><span>RAG Dev</span></div>
+    <div class="skill-card"><i class='bx bx-link'></i><span>LangChain</span></div>
+    <div class="skill-card"><i class='bx bx-bot'></i><span>Agentic AI</span></div>
+    <div class="skill-card"><i class='bx bx-plug'></i><span>REST API</span></div>
   </div>
 </section>
-<section class="skills container py-5" id="skills">
-  <h1 class="heading text-center mb-4">My <span>Skills</span></h1>
-  <div class="row text-center">
 
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bxl-html5'></i><span>HTML</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bxl-css3'></i><span>CSS</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bxl-javascript'></i><span>JavaScript</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bxl-python'></i><span>Python</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bxl-django'></i><span>Django</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bxl-react'></i><span>React</span></div>
-    </div>
 
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bxl-mongodb'></i><span>MongoDB</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bx-code-block'></i><span>Flask</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bx-server'></i><span>FastAPI</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bx-brain'></i><span>Artificial Intelligence</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bxl-php'></i><span>PHP</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bx-cube'></i><span>TensorFlow</span></div>
-    </div>
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h1 class="heading">My <span>Projects</span></h1>
+    <div class="project-container" id="project-container">
 
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bx-bot'></i><span>Scikit-learn</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bx-bar-chart'></i><span>Pandas</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bx-math'></i><span>NumPy</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bx-line-chart'></i><span>Matplotlib</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bxl-git'></i><span>Git</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bx-search-alt'></i><span>RAG Dev</span></div>
-    </div>
-
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bx-link'></i><span>LangChain</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bx-bot'></i><span>Agentic AI</span></div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-      <div class="skill-card"><i class='bx bx-plug'></i><span>REST API</span></div>
-    </div>
-
-  </div>
-</section>
-<section class="projects container py-5" id="projects">
-  <h1 class="heading text-center mb-4">My <span>Projects</span></h1>
-  <div class="row">
-
-    <!-- Project 1 -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="project-box p-4 bg-dark text-white rounded h-100">
-        <i class="bx bxs-leaf mb-2"></i>
+      <div class="project-box">
+        <i class="bx bxs-leaf"></i>
         <h3>Farmers Buddy</h3>
-        <p>ML-powered crop recommendation system using soil and weather data to help farmers maximize yield.</p>
-        <a href="https://github.com/Sharavanakumar-Ramalingam/farmers-buddy" target="_blank" class="btn btn-outline-info btn-sm">View on GitHub</a>
+        <p>ML-powered crop recommendation system based on soil and weather data to help farmers maximize yield.</p>
+        <a href="https://github.com/Sharavanakumar-Ramalingam/farmers-buddy" class="btn" target="_blank">View on GitHub</a>
       </div>
-    </div>
 
-    <!-- Project 2 -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="project-box p-4 bg-dark text-white rounded h-100">
-        <i class="bx bx-capsule mb-2"></i>
+      <div class="project-box">
+        <i class="bx bx-capsule"></i>
         <h3>Medical Chatbot</h3>
-        <p>NLP-based chatbot that analyzes symptoms and predicts diseases using AI for virtual health assistance.</p>
-        <a href="https://github.com/Sharavanakumar-Ramalingam/medical-chatbot" target="_blank" class="btn btn-outline-info btn-sm">View on GitHub</a>
+        <p>NLP-powered chatbot for symptom analysis and disease prediction. Offers virtual health assistance using AI.</p>
+        <a href="https://github.com/Sharavanakumar-Ramalingam/medical-chatbot" class="btn" target="_blank">View on GitHub</a>
       </div>
-    </div>
 
-    <!-- Project 3 -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="project-box p-4 bg-dark text-white rounded h-100">
-        <i class="bx bx-chat mb-2"></i>
+      <div class="project-box">
+        <i class="bx bx-chat"></i>
         <h3>LinguaLearn</h3>
-        <p>AI-powered English fluency trainer offering real-time conversation practice and smart feedback.</p>
-        <a href="https://github.com/Sharavanakumar-Ramalingam/language-buddy" target="_blank" class="btn btn-outline-info btn-sm">View on GitHub</a>
+        <p>AI-based spoken English practice tool with live feedback. Helps users improve fluency via conversation.</p>
+        <a href="https://github.com/Sharavanakumar-Ramalingam/language-buddy" class="btn" target="_blank">View on GitHub</a>
       </div>
-    </div>
 
-    <!-- Project 4 -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="project-box p-4 bg-dark text-white rounded h-100">
-        <i class="bx bx-book mb-2"></i>
+      <div class="project-box">
+        <i class="bx bx-book"></i>
         <h3>Sibi</h3>
-        <p>Tamil language learning assistant focused on grammar, pronunciation, and daily phrases using AI.</p>
-        <a href="https://github.com/Sharavanakumar-Ramalingam/lingualearn-sibi" target="_blank" class="btn btn-outline-info btn-sm">View on GitHub</a>
+        <p>Regional language learning assistant focused on Tamil grammar, pronunciation, and everyday phrases.</p>
+        <a href="https://github.com/Sharavanakumar-Ramalingam/lingualearn-sibi" class="btn" target="_blank">View on GitHub</a>
       </div>
-    </div>
 
-    <!-- Project 5 -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="project-box p-4 bg-dark text-white rounded h-100">
-        <i class="bx bx-video mb-2"></i>
+      <div class="project-box">
+        <i class="bx bx-video"></i>
         <h3>Text-to-Video Generator</h3>
-        <p>Transforms input text into short educational videos using LLMs and GAN-based frame generation.</p>
-        <a href="https://github.com/Sharavanakumar-Ramalingam/text-to-video" target="_blank" class="btn btn-outline-info btn-sm">View on GitHub</a>
+        <p>Converts text into short video clips using GPT embeddings and GAN-based frame generation. GenAI-powered.</p>
+        <a href="https://github.com/Sharavanakumar-Ramalingam/text-to-video" class="btn" target="_blank">View on GitHub</a>
       </div>
-    </div>
 
-    <!-- Project 6 -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="project-box p-4 bg-dark text-white rounded h-100">
-        <i class="bx bx-image mb-2"></i>
+      <div class="project-box">
+        <i class="bx bx-image"></i>
         <h3>Text-to-Image Generator</h3>
-        <p>Generates high-quality images from text prompts using generative adversarial networks (GANs).</p>
-        <a href="https://github.com/Sharavanakumar-Ramalingam/text-to-image" target="_blank" class="btn btn-outline-info btn-sm">View on GitHub</a>
+        <p>Generates realistic and artistic images from user prompts using GANs and multimodal embeddings.</p>
+        <a href="https://github.com/Sharavanakumar-Ramalingam/text-to-image" class="btn" target="_blank">View on GitHub</a>
       </div>
-    </div>
 
-    <!-- Project 7 -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="project-box p-4 bg-dark text-white rounded h-100">
-        <i class="bx bx-edit-alt mb-2"></i>
+      <div class="project-box">
+        <i class="bx bx-edit-alt"></i>
         <h3>AI Image Editor</h3>
-        <p>Browser-based tool to edit and transform images with background removal, style transfer, and more.</p>
-        <a href="https://github.com/Sharavanakumar-Ramalingam/ai-image-editor" target="_blank" class="btn btn-outline-info btn-sm">View on GitHub</a>
+        <p>Smart image editor with background remover, style transfer, and real-time enhancements powered by AI.</p>
+        <a href="https://github.com/Sharavanakumar-Ramalingam/ai-image-editor" class="btn" target="_blank">View on GitHub</a>
       </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
-<section class="certifications container py-5" id="certifications">
-  <h1 class="heading text-center mb-4">My <span>Achievements</span></h1>
-  <div class="row">
+  <!-- Certificates & Achievements -->
+  <section class="certifications" id="certifications">
+    <h1 class="heading">My <span>Achievements</span></h1>
+    <div class="certificates-container">
 
-    <!-- Certificate 1 -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="certificate-box bg-dark text-white p-4 rounded h-100">
-        <i class="bx bxs-certification mb-2"></i>
+      <div class="certificate-box">
+        <i class="bx bxs-certification"></i>
         <h3>IBM Certified AI Developer</h3>
         <p>Completed a professional certification course on Artificial Intelligence and its applications in real-world systems.</p>
       </div>
-    </div>
 
-    <!-- Certificate 2 -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="certificate-box bg-dark text-white p-4 rounded h-100">
-        <i class="bx bx-medal mb-2"></i>
+      <div class="certificate-box">
+        <i class="bx bx-medal"></i>
         <h3>Best Performer & Communicator</h3>
-        <p>Received Best Performer and Best Communicator awards in inter-college hackathons and project presentations.</p>
+        <p>Received Best Performer and Communicator award in inter-college hackathons and project presentations.</p>
       </div>
-    </div>
 
-    <!-- Certificate 3 -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="certificate-box bg-dark text-white p-4 rounded h-100">
-        <i class="bx bxs-star mb-2"></i>
+      <div class="certificate-box">
+        <i class="bx bxs-star"></i>
         <h3>Symposium Wins</h3>
         <p>Won Second Prize in Paper Presentations at national-level symposiums conducted by two engineering colleges.</p>
       </div>
-    </div>
 
-    <!-- Certificate 4 -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="certificate-box bg-dark text-white p-4 rounded h-100">
-        <i class="bx bxs-user-detail mb-2"></i>
+      <div class="certificate-box">
+        <i class="bx bxs-user-detail"></i>
         <h3>GUVI Campus Ambassador</h3>
         <p>Served as a tech ambassador, promoting GUVI learning platforms and mentoring peers across the campus.</p>
       </div>
-    </div>
 
-    <!-- Certificate 5 -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="certificate-box bg-dark text-white p-4 rounded h-100">
-        <i class="bx bx-briefcase mb-2"></i>
+      <div class="certificate-box">
+        <i class="bx bx-briefcase"></i>
         <h3>Developer Intern - GUVI IITM</h3>
         <p>Worked on real-world projects as a Developer Trainee Intern at GUVI, IIT Madras Research Park (Jul–Sep 2024).</p>
       </div>
-    </div>
 
-  </div>
-</section>
-<section class="contact container py-5" id="contact">
-  <h1 class="heading text-center mb-4">Contact <span>Me</span></h1>
-  <form action="https://formspree.io/f/xwpeboya" method="POST">
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <input type="text" name="name" class="form-control" placeholder="Your Name" required />
-      </div>
-      <div class="form-group col-md-6">
-        <input type="email" name="email" class="form-control" placeholder="Your Email" required />
-      </div>
     </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <input type="text" name="mobile" class="form-control" placeholder="Your Mobile" />
-      </div>
-      <div class="form-group col-md-6">
-        <input type="text" name="subject" class="form-control" placeholder="Subject" required />
-      </div>
-    </div>
-    <div class="form-group">
-      <textarea name="message" class="form-control" rows="6" placeholder="Your Message" required></textarea>
-    </div>
-    <div class="text-center">
-      <button type="submit" class="btn btn-primary px-4">Send</button>
-    </div>
-  </form>
-</section>
-<div id="chat-toggle" onclick="toggleChat()">💬</div>
-<div id="chat-overlay" class="chat-overlay" style="display: none;" onclick="toggleChat()"></div>
-<div class="chatbot-container" id="chatbot" style="display: none;">
-  <div class="chat-header">
-    🤖 AI Assistant <span id="chat-close" onclick="toggleChat()">×</span>
-  </div>
-  <div class="chat-messages" id="chat-messages"></div>
-  <div class="chat-input">
-    <input type="text" id="user-input" placeholder="Ask me anything..." />
-    <button onclick="sendMessage()">Send</button>
-  </div>
-</div>
-<!-- Footer -->
-<footer class="footer bg-dark text-white text-center py-3">
-  <div class="container">
-    <p class="mb-0">© 2024 <strong>Sharavana Kumar</strong> | All Rights Reserved.</p>
-  </div>
-</footer>
-<!-- Footer -->
-<footer class="footer bg-dark text-white text-center py-3">
-  <p>© 2024 Sharavana Kumar | All Rights Reserved.</p>
-</footer>
+  </section>
 
-<!-- Scroll to Top -->
-<a href="#home" class="scroll-top"><i class="bx bx-up-arrow-alt"></i></a>
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h1 class="heading">Contact <span>Me</span></h1>
+    <form action="https://formspree.io/f/xwpeboya" method="POST">
+      <div class="input-box">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+      </div>
+      <div class="input-box">
+        <input type="text" name="mobile" placeholder="Your Mobile" />
+        <input type="text" name="subject" placeholder="Subject" required />
+      </div>
+      <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+ <!-- ===== CHATBOT ELEMENTS ===== -->
+  <div id="chat-toggle" onclick="toggleChat()">💬</div>
 
-<!-- JS Scripts -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="script.js"></script>
+  <div id="chat-overlay" class="chat-overlay" onclick="toggleChat()" style="display: none;"></div>
 
+  <div class="chatbot-container" id="chatbot" style="display: none;">
+    <div class="chat-header">
+      🤖 AI Assistant <span id="chat-close" onclick="toggleChat()">×</span>
+    </div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Ask me anything..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-text">
+      <p>© 2024 Sharavana Kumar | All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <a href="#home" class="scroll-top"><i class="bx bx-up-arrow-alt"></i></a>
+
+  <!-- ScrollReveal & JS -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="script.js"></script>
 </body>
 </html>
