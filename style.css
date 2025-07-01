@@ -644,6 +644,7 @@ section {
 /* Chatbot Container */
 
 .chatbot-container {
+  font-family: 'Poppins', sans-serif;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -657,7 +658,7 @@ section {
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  font-size:1.4rem;
+  /*font-size:1.4rem;*/
 }
 
 /* Chatbot Header */
