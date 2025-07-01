@@ -185,7 +185,7 @@ async function sendMessage() {
 
   if (!userText) return;
 
-  chatBox.innerHTML += `<div><strong>You:</strong> ${userText}</div>`;
+  chatBox.innerHTML += `<div class="chat-message user-msg"><strong>You:</strong> ${userText}</div>`;
   input.value = "";
   messages.push({ role: "user", content: userText });
 
@@ -203,7 +203,7 @@ async function sendMessage() {
     }
 
     const reply = data.choices[0].message.content;
-    chatBox.innerHTML += `<div><strong>Bot:</strong> ${reply}</div>`;
+    chatBox.innerHTML += `<div class="chat-message bot-msg"><strong>Bot:</strong> ${reply}</div>`;
     chatBox.scrollTop = chatBox.scrollHeight;
     messages.push({ role: "assistant", content: reply });
 
