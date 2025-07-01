@@ -714,3 +714,28 @@ section {
   pointer-events: none; /* prevent clicks while blurred */
   user-select: none;
 }
+.chat-message {
+  margin: 8px 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  max-width: 80%;
+  line-height: 1.5;
+  word-wrap: break-word;
+  font-size: 0.95rem;
+}
+
+.user-msg {
+  background-color: #e0f7fa;
+  color: #00303f;
+  align-self: flex-end;
+  margin-left: auto;
+  border-top-right-radius: 0;
+}
+
+.bot-msg {
+  background-color: #f3e5f5;
+  color: #4a148c;
+  align-self: flex-start;
+  margin-right: auto;
+  border-top-left-radius: 0;
+}
