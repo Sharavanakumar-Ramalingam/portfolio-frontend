@@ -801,3 +801,53 @@ section {
   margin-right: auto;
   border-top-left-radius: 0;
 }
+@media (max-width: 992px) {
+  .home-content, .about-content {
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .chatbot-container {
+    width: 90vw;
+    height: 80vh;
+    bottom: 10px;
+    right: 5vw;
+  }
+
+  .scroll-top {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    font-size: 0.9rem;
+  }
+
+  .home h1, .about h1 {
+    font-size: 1.5rem;
+  }
+
+  .skill-card i {
+    font-size: 1.8rem;
+  }
+
+  .chatbot-container {
+    font-size: 0.9rem;
+  }
+}
