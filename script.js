@@ -164,7 +164,7 @@ async function sendMessage() {
   messages.push({ role: "user", content: userText });
 
   try {
-    const response = await fetch("https://portfolio-backend-b1pf.onrender.com", {
+    const response = await fetch("https://portfolio-backend-b1pf.onrender.com/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ messages })
