@@ -116,7 +116,7 @@ function typeEffect() {
 document.addEventListener("DOMContentLoaded", typeEffect);
 
 // =========================
-// Chatbot Integration (with hosted Flask backend)
+// Chatbot Integration (Flask backend)
 // =========================
 const messages = [
   {
@@ -153,8 +153,6 @@ Always answer politely, clearly, and concisely like a helpful guide. If asked ab
   }
 ];
 
-
-
 function toggleChat() {
   const chatbot = document.getElementById("chatbot");
   const overlay = document.getElementById("chat-overlay");
@@ -186,9 +184,15 @@ async function sendMessage() {
 
   if (!userText) return;
 
+  // Add user message
   chatBox.innerHTML += `<div class="chat-message user-msg"><strong>You:</strong> ${userText}</div>`;
+  chatBox.scrollTo({ top: chatBox.scrollHeight, behavior: "smooth" });
   input.value = "";
   messages.push({ role: "user", content: userText });
+
+  // Typing indicator
+  chatBox.innerHTML += `<div class="chat-message bot-msg" id="typing"><em>Bot is typing...</em></div>`;
+  chatBox.scrollTo({ top: chatBox.scrollHeight, behavior: "smooth" });
 
   try {
     const response = await fetch("https://portfolio-backend-b1pf.onrender.com/chat", {
@@ -198,18 +202,33 @@ async function sendMessage() {
     });
 
     const data = await response.json();
+    document.getElementById("typing").remove(); // Remove typing
 
     if (!data.choices || !data.choices[0]) {
       throw new Error(data.error || "No valid response from server");
     }
 
     const reply = data.choices[0].message.content;
+
     chatBox.innerHTML += `<div class="chat-message bot-msg"><strong>Bot:</strong> ${reply}</div>`;
-    chatBox.scrollTop = chatBox.scrollHeight;
+    chatBox.scrollTo({ top: chatBox.scrollHeight, behavior: "smooth" });
+
     messages.push({ role: "assistant", content: reply });
 
   } catch (error) {
-    chatBox.innerHTML += `<div><strong>Bot:</strong> Error: ${error.message}</div>`;
+    document.getElementById("typing")?.remove();
+    chatBox.innerHTML += `<div class="chat-message bot-msg"><strong>Bot:</strong> Error: ${error.message}</div>`;
+    chatBox.scrollTo({ top: chatBox.scrollHeight, behavior: "smooth" });
     console.error("Chatbot error:", error);
   }
 }
+
+// =========================
+// Enter Key to Send Message
+// =========================
+document.getElementById("user-input").addEventListener("keypress", function (event) {
+  if (event.key === "Enter" && !event.shiftKey) {
+    event.preventDefault();
+    sendMessage();
+  }
+});
