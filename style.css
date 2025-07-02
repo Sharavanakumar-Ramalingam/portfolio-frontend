@@ -604,12 +604,266 @@ section {
   margin: 0;
 }
 
+/* Root Variables */
+:root {
+  --bg-color: #fffef8;
+  --second-bg-color: #fefae0;
+  --main-color: #d4a373;
+  --accent-color: #6c584c;
+  --text-color: #3e3c29;
+  --glass: rgba(0, 0, 0, 0.03);
+  --glass-blur: blur(10px);
+}
 
-/* ----------------------
-   RESPONSIVE SIDEBAR NAVBAR
----------------------- */
+/* Base Styles */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
 
-/* Apply for all screens below 992px (tablet and smaller) */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header & Navbar */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2rem 5%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar a {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+#menu-icon {
+  display: none;
+}
+
+/* Section Layouts */
+section {
+  padding: 6rem 8%;
+}
+
+.heading {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--main-color);
+}
+
+/* Home */
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 10rem;
+}
+
+.home-content {
+  flex: 1 1 45rem;
+}
+
+.home-image {
+  flex: 1 1 45rem;
+  text-align: center;
+}
+
+.home-image img {
+  width: 80%;
+  max-width: 400px;
+}
+
+.typing-text {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  color: var(--main-color);
+  background: var(--glass);
+  border: 1px solid var(--main-color);
+  border-radius: 3rem;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.skill-card {
+  background: var(--second-bg-color);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  min-width: 140px;
+  min-height: 140px;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 1rem var(--accent-color);
+}
+
+.skill-card i {
+  font-size: 3.6rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.skill-card span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-top: 0.5rem;
+}
+
+/* Contact */
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  background: #fffef8;
+  padding: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.05);
+  backdrop-filter: var(--glass-blur);
+  color: var(--text-color);
+}
+
+.contact .input-box {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contact .input-box input,
+.contact textarea {
+  flex: 1;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--second-bg-color);
+  font-size: 1.6rem;
+  color: var(--text-color);
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact textarea {
+  resize: none;
+  height: 150px;
+  margin-bottom: 2rem;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: var(--accent-color);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.contact .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--glass);
+  color: var(--main-color);
+  font-size: 1.6rem;
+  padding: 1.2rem 2.8rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 1px solid var(--main-color);
+  transition: 0.3s ease;
+  backdrop-filter: var(--glass-blur);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
+}
+
+.contact .btn:hover {
+  background: var(--main-color);
+  color: white;
+}
+
+/* Footer */
+.footer {
+  background: var(--bg-color);
+  padding: 2rem 5%;
+  text-align: center;
+  border-top: 1px solid #e0dcc5;
+}
+
+.footer-text p {
+  font-size: 1.4rem;
+  color: #3e3c29;
+  margin: 0;
+}
+
+/* Chatbot */
+.chatbot-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 5%;
+  margin-top: 2rem;
+}
+
+.chatbot-container {
+  width: min(100%, 400px);
+  height: min(80vh, 480px);
+  background: var(--second-bg-color);
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive Sidebar Navbar */
 @media (max-width: 992px) {
   #menu-icon {
     display: block;
@@ -619,21 +873,20 @@ section {
     color: var(--main-color);
   }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 240px;
-  height: 100vh; /* Full height always */
-  background: var(--second-bg-color);
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 6rem 2rem 2rem;
-  transition: 0.4s ease-in-out;
-  z-index: 1000;
-  overflow-y: auto; /* Ensure scroll if links exceed height */
-}
-
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 240px;
+    height: 100vh;
+    background: var(--second-bg-color);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 6rem 2rem 2rem;
+    transition: 0.4s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto;
+  }
 
   .navbar.active {
     left: 0;
@@ -647,21 +900,54 @@ section {
     color: var(--text-color);
   }
 
-  .header {
-    padding: 1.5rem 5%;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background: var(--bg-color);
-  }
-
   .home,
   .about,
   .skills,
   .projects,
   .certifications,
   .contact {
-    padding-top: 9rem; /* space below fixed navbar */
+    padding-top: 9rem;
+  }
+
+  .home,
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-image img,
+  .about-image img {
+    width: 90%;
+    margin: auto;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact form {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 48%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    width: 100%;
+  }
+
+  .footer-text p {
+    font-size: 1.2rem;
+  }
+
+  .chatbot-container {
+    height: 400px;
   }
 }
