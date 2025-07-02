@@ -487,7 +487,14 @@ section {
 }
 
 /* Chatbot Container */
-
+/* Chatbot */
+.chatbot-wrapper {
+  width: 100%;
+  padding: 0 5%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
 .chatbot-container {
   font-family: 'Poppins', sans-serif;
   position: fixed;
@@ -619,6 +626,7 @@ section {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -628,6 +636,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Header & Navbar */
@@ -674,6 +683,7 @@ body {
 /* Section Layouts */
 section {
   padding: 6rem 8%;
+  overflow-x: hidden;
 }
 
 .heading {
@@ -715,8 +725,8 @@ section {
   display: inline-block;
   padding: 1rem 3rem;
   font-size: 1.6rem;
-  color: var(--main-color);
-  background: var(--glass);
+  color: #fff;
+  background: linear-gradient(to right, var(--main-color), var(--accent-color));
   border: 1px solid var(--main-color);
   border-radius: 3rem;
   transition: 0.3s;
@@ -724,7 +734,7 @@ section {
 }
 
 .btn:hover {
-  background: var(--main-color);
+  background: linear-gradient(to left, var(--main-color), var(--accent-color));
   color: #fff;
 }
 
@@ -774,7 +784,7 @@ section {
   border-radius: 2rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.05);
   backdrop-filter: var(--glass-blur);
-  color: var(--text-color);
+  color: var(--main-color);
 }
 
 .contact .input-box {
@@ -793,7 +803,7 @@ section {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: var(--second-bg-color);
   font-size: 1.6rem;
-  color: var(--text-color);
+  color: var(--main-color);
   outline: none;
   transition: 0.3s;
 }
@@ -814,8 +824,8 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--glass);
-  color: var(--main-color);
+  background: linear-gradient(to right, var(--main-color), var(--accent-color));
+  color: #fff;
   font-size: 1.6rem;
   padding: 1.2rem 2.8rem;
   border-radius: 3rem;
@@ -827,7 +837,7 @@ section {
 }
 
 .contact .btn:hover {
-  background: var(--main-color);
+  background: linear-gradient(to left, var(--main-color), var(--accent-color));
   color: white;
 }
 
@@ -837,6 +847,7 @@ section {
   padding: 2rem 5%;
   text-align: center;
   border-top: 1px solid #e0dcc5;
+  overflow-x: hidden;
 }
 
 .footer-text p {
@@ -845,23 +856,6 @@ section {
   margin: 0;
 }
 
-/* Chatbot */
-.chatbot-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 5%;
-  margin-top: 2rem;
-}
-
-.chatbot-container {
-  width: min(100%, 400px);
-  height: min(80vh, 480px);
-  background: var(--second-bg-color);
-  border: 1px solid var(--main-color);
-  border-radius: 10px;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.08);
-}
 
 /* Responsive Sidebar Navbar */
 @media (max-width: 992px) {
