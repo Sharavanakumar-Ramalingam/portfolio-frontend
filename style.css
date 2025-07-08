@@ -899,8 +899,7 @@ section {
   .skills,
   .projects,
   .certifications,
-  .contact 
-  .chatbot-wrapper{
+  .contact {
     padding-top: 9rem;
   }
 
@@ -942,7 +941,9 @@ section {
     font-size: 1.2rem;
   }
 
-  .chatbot-container {
+  .chatbot-container 
+  .chatbot-wrapper{
+    justify-content: flex-start;
     height: 400px;
   }
 }
