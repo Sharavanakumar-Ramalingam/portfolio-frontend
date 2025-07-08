@@ -899,7 +899,8 @@ section {
   .skills,
   .projects,
   .certifications,
-  .contact {
+  .contact 
+  .chatbot-wrapper{
     padding-top: 9rem;
   }
 
