@@ -924,7 +924,7 @@ section {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 420px) {
   html {
     font-size: 48%;
   }
@@ -941,9 +941,8 @@ section {
     font-size: 1.2rem;
   }
 
-  .chatbot-container 
-  .chatbot-wrapper{
-      width:90%;
+  .chatbot-container {
+    width:90%;
     justify-content: center;
     height: 400px;
   }
