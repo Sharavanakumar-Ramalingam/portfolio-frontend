@@ -943,7 +943,7 @@ section {
 
   .chatbot-container 
   .chatbot-wrapper{
-    justify-content: flex-start;
+    justify-content: center;
     height: 400px;
   }
 }
